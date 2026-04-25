@@ -1,7 +1,3 @@
-/* nav.js — shared header for all pages
-   Usage: <script src="../js/nav.js" data-works="works/index.html"></script>
-   Set data-root to the path prefix to reach site root, e.g. "" or "../"
-*/
 (function () {
   const script = document.currentScript;
   const root = script.getAttribute('data-root') || '';
@@ -20,7 +16,7 @@
     ).join('\n');
   }
 
-  const html = `
+  document.write(`
 <header class="header">
   <div class="mirel">
     <a href="${root}works/index.html"><li>Works</li></a>
@@ -31,29 +27,26 @@
     <hr>
   </div>
 </header>
-
 <div class="workindex">
   <ul class="albums">
     ${workLinks()}
   </ul>
 </div>
-
 <div class="mobileworkindex">
   <ul class="albums">
     ${workLinks()}
   </ul>
 </div>
-`;
-
-  document.write(html);
+`);
 
   window.addEventListener('DOMContentLoaded', function () {
-    const footer = document.createElement('footer');
-    footer.className = 'footer';
-    footer.innerHTML = `© 2026 Chiara Bulang. Alle Rechte vorbehalten.<br>
-Der gesamte Inhalt dieser Website (einschließlich Code, Videos, Bilder, Texte und Design)
-darf ohne ausdrückliche schriftliche Genehmigung nicht kopiert, verändert,
-verbreitet oder anderweitig genutzt werden.`;
-    document.querySelector('main').appendChild(footer);
+    document.body.insertAdjacentHTML('beforeend',
+      '<footer class="footer">' +
+      '\u00a9 2026 Chiara Bulang. Alle Rechte vorbehalten.<br>' +
+      'Der gesamte Inhalt dieser Website (einschlie\u00dflich Code, Videos, Bilder, Texte und Design) ' +
+      'darf ohne ausdr\u00fcckliche schriftliche Genehmigung nicht kopiert, ver\u00e4ndert, ' +
+      'verbreitet oder anderweitig genutzt werden.' +
+      '</footer>'
+    );
   });
 })();
