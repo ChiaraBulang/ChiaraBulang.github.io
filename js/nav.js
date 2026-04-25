@@ -8,7 +8,8 @@
 
   const works = [
     { title: 'Interwoven', slug: 'interwoven' },
-    /* Add more works here as { title, slug } */
+    { title: 'let me breathe', slug: 'let-me-breathe' },
+    { title: 'Netz', slug: 'netz' },
   ];
 
   function workLinks() {
