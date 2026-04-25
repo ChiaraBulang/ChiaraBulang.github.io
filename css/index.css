@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600&display=swap');
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Gothic A1', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+body {
+  padding: 0.5em;
+}
+
+::selection {
+  color: white;
+  background-color: black;
+}
+
+li { list-style: none; }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+hr {
+  border: none;
+  margin-top: 1em;
+}
+
+img { max-width: 100%; }
+
+strong, b { font-weight: 600; }
+
+/* Header */
+.header {
+  font-size: 0.8em;
+  position: fixed;
+  z-index: 5555;
+  line-height: 1.4em;
+}
+
+.mirel {
+  display: block;
+  text-align: left;
+  position: fixed;
+  letter-spacing: 0.03em;
+  z-index: -5;
+}
+
+.mirer {
+  top: 0.5em;
+  right: 1em;
+  text-align: right;
+  display: block;
+  position: fixed;
+  letter-spacing: 0.03em;
+}
+
+.mirer li {
+  display: inline;
+  margin-left: 1em;
+}
+
+.mirer ul { display: block; }
+
+/* Work index â€” hidden on mobile, shown on desktop */
+.workindex {
+  display: none;
+}
+
+.mobileworkindex {
+  display: block;
+  font-size: 0.8em;
+  position: fixed;
+  margin-top: 5em;
+  letter-spacing: 0.03em;
+  line-height: 2em;
+  z-index: 44;
+  width: 95%;
+}
+
+@media screen and (min-width: 50rem) {
+  .mobileworkindex { display: none; }
+
+  .workindex {
+    display: block;
+    font-size: 0.8em;
+    position: fixed;
+    margin-top: 2em;
+    letter-spacing: 0.03em;
+    line-height: 1.5em;
+    z-index: 44;
+    width: 27%;
+  }
+
+  .workindex a { text-decoration: none; }
+
+  .workindex li {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .workindex li:hover {
+    text-decoration: underline;
+    overflow: visible;
+  }
+}
+
+/* Main content */
+main {
+  min-height: calc(100vh - 10rem);
+  padding-top: 0;
+  padding-bottom: 3em;
+}
+
+/* Work detail page */
+.work-content {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 50rem) {
+  .work-content {
+    margin-left: 30%;
+    max-width: 65%;
+  }
+  .work-content.full {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+.work-content img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.work-content .caption {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 2em;
+  line-height: 1.4em;
+}
+
+.work-content h1 {
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 1em;
+  margin-top: 3em;
+}
+
+/* About page */
+.about-content {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  letter-spacing: 0.03em;
+  margin-top: 5em;
+}
+
+@media screen and (min-width: 50rem) {
+  .about-content {
+    margin-top: 2em;
+    max-width: 40%;
+    margin-left: 30%;
+  }
+}
+
+.about-content p {
+  margin-bottom: 1.3em;
+}
+
+.about-content a {
+  text-decoration: underline;
+}
+
+/* Video embed */
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 20px;
+  height: 0;
+}
+
+.video iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+/* Active nav link */
+a.active { text-decoration: underline; }
