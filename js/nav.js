@@ -5,11 +5,12 @@
 (function () {
   const script = document.currentScript;
   const root = script.getAttribute('data-root') || '';
-
+*/hier kannst du alle neuen titel, in genau diesem Style, hinzufügen:
   const works = [
     { title: 'Interwoven', slug: 'interwoven' },
     { title: 'let me breathe', slug: 'let-me-breathe' },
     { title: 'Netz', slug: 'netz' },
+    {title: 'Numb', slug: 'numb'},
   ];
 
   function workLinks() {
