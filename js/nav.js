@@ -7,10 +7,8 @@
   const root = script.getAttribute('data-root') || '';
 
   const works = [
-    { title: 'Work A', slug: 'work-a' },
-    { title: 'Work B', slug: 'work-b' },
-    { title: 'Work C', slug: 'work-c' },
-    /* Add more works here as objects { title, slug } */
+    { title: 'Interwoven', slug: 'interwoven' },
+    /* Add more works here as { title, slug } */
   ];
 
   function workLinks() {
