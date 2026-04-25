@@ -5,12 +5,13 @@
 (function () {
   const script = document.currentScript;
   const root = script.getAttribute('data-root') || '';
-*/hier kannst du alle neuen titel, in genau diesem Style, hinzufügen:
+
   const works = [
     { title: 'Interwoven', slug: 'interwoven' },
     { title: 'let me breathe', slug: 'let-me-breathe' },
     { title: 'Netz', slug: 'netz' },
-    {title: 'Numb', slug: 'numb'},
+    { title: 'Numb', slug: 'numb' },
+    { title: 'shame is an isolating emotion (working title)', slug: 'shame' },
   ];
 
   function workLinks() {
@@ -45,4 +46,14 @@
 `;
 
   document.write(html);
+
+  window.addEventListener('DOMContentLoaded', function () {
+    const footer = document.createElement('footer');
+    footer.className = 'footer';
+    footer.innerHTML = `© 2026 Chiara Bulang. Alle Rechte vorbehalten.<br>
+Der gesamte Inhalt dieser Website (einschließlich Code, Videos, Bilder, Texte und Design)
+darf ohne ausdrückliche schriftliche Genehmigung nicht kopiert, verändert,
+verbreitet oder anderweitig genutzt werden.`;
+    document.querySelector('main').appendChild(footer);
+  });
 })();
